@@ -1,0 +1,197 @@
+/* Import design tokens (auto-generated from tokens/*.json) */
+@import './styles/generated/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   SYSTEM/FRAMEWORK TOKENS
+   Static tokens for the app chrome (shell).
+   These are NOT derived from application tokens
+   so the framework renders correctly regardless
+   of dynamic token loading.
+   ============================================ */
+:root {
+  /* Layout dimensions */
+  --sys-header-height: 64px;
+  --sys-sidebar-width: 72px;
+  --sys-sidebar-width-expanded: 240px;
+  --sys-footer-height: 56px;
+  --sys-content-max-width: 1200px;
+  --sys-content-padding: 1.5rem;
+
+  /* Breakpoints */
+  --sys-breakpoint-sm: 640px;
+  --sys-breakpoint-md: 768px;
+  --sys-breakpoint-lg: 1024px;
+  --sys-breakpoint-xl: 1280px;
+  --sys-breakpoint-2xl: 1536px;
+
+  /* Header */
+  --sys-header-bg: #1f2937;
+  --sys-header-text: #f9fafb;
+  --sys-header-border: #374151;
+
+  /* Sidebar */
+  --sys-sidebar-bg: #1f2937;
+  --sys-sidebar-text: #f9fafb;
+  --sys-sidebar-text-muted: #9ca3af;
+  --sys-sidebar-hover: #374151;
+  --sys-sidebar-active: #111827;
+
+  /* Footer */
+  --sys-footer-bg: #1f2937;
+  --sys-footer-text: #9ca3af;
+
+  /* System backgrounds */
+  --sys-bg: #ffffff;
+  --sys-bg-secondary: #f9fafb;
+  --sys-bg-tertiary: #f3f4f6;
+
+  /* System borders */
+  --sys-border: #e5e7eb;
+  --sys-border-strong: #d1d5db;
+
+  /* System text */
+  --sys-text: #111827;
+  --sys-text-secondary: #6b7280;
+  --sys-text-muted: #9ca3af;
+
+  /* System cards */
+  --sys-card-bg: #ffffff;
+  --sys-card-border: #e5e7eb;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   LAYOUT CLASSES
+   ============================================ */
+
+.main-content {
+  flex-grow: 1;
+  margin-left: var(--sys-sidebar-width);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  max-width: var(--sys-content-max-width);
+  position: relative;
+}
+
+.content {
+  padding: var(--spacing-xl);
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ============================================
+   SPACING UTILITY CLASSES
+   ============================================ */
+
+.margin-2xs { margin: var(--spacing-2xs); }
+.margin-xs { margin: var(--spacing-xs); }
+.margin-sm { margin: var(--spacing-sm); }
+.margin-md { margin: var(--spacing-md); }
+.margin-lg { margin: var(--spacing-lg); }
+.margin-xl { margin: var(--spacing-xl); }
+.margin-2xl { margin: var(--spacing-2xl); }
+.margin-3xl { margin: var(--spacing-3xl); }
+
+.padding-2xs { padding: var(--spacing-2xs); }
+.padding-xs { padding: var(--spacing-xs); }
+.padding-sm { padding: var(--spacing-sm); }
+.padding-md { padding: var(--spacing-md); }
+.padding-lg { padding: var(--spacing-lg); }
+.padding-xl { padding: var(--spacing-xl); }
+.padding-2xl { padding: var(--spacing-2xl); }
+.padding-3xl { padding: var(--spacing-3xl); }
+
+.gap-2xs { gap: var(--spacing-2xs); }
+.gap-xs { gap: var(--spacing-xs); }
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+.gap-xl { gap: var(--spacing-xl); }
+.gap-2xl { gap: var(--spacing-2xl); }
+.gap-3xl { gap: var(--spacing-3xl); }
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+.dark * {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: var(--color-gray-dark);
+  border-color: var(--color-gray-medium);
+  color: var(--color-text-primary);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--color-gray-medium);
+}
+
+/* ============================================
+   COMPONENT CLASSES
+   ============================================ */
+
+/* Card */
+.card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-button-y) var(--spacing-button-x);
+  border-radius: var(--border-radius-button);
+  transition: all var(--transition-duration-default) var(--transition-easing-default);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-button-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-button-secondary);
+  color: var(--color-button-secondary-text);
+  border: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-button-outline-text);
+  border: 1px solid var(--color-button-outline-border);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gray-mist);
+}

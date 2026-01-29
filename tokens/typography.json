@@ -1,0 +1,154 @@
+{
+  "font": {
+    "family": {
+      "sans": {
+        "value": "Inter, system-ui, -apple-system, sans-serif",
+        "type": "fontFamily",
+        "description": "Primary sans-serif font"
+      },
+      "mono": {
+        "value": "ui-monospace, SFMono-Regular, Menlo, Monaco, monospace",
+        "type": "fontFamily",
+        "description": "Monospace font"
+      }
+    },
+    "size": {
+      "xs": {
+        "value": "0.75rem",
+        "type": "fontSize",
+        "description": "Extra small (12px)"
+      },
+      "sm": {
+        "value": "0.875rem",
+        "type": "fontSize",
+        "description": "Small (14px)"
+      },
+      "base": {
+        "value": "1rem",
+        "type": "fontSize",
+        "description": "Base (16px)"
+      },
+      "lg": {
+        "value": "1.125rem",
+        "type": "fontSize",
+        "description": "Large (18px)"
+      },
+      "xl": {
+        "value": "1.25rem",
+        "type": "fontSize",
+        "description": "Extra large (20px)"
+      },
+      "2xl": {
+        "value": "1.5rem",
+        "type": "fontSize",
+        "description": "2XL (24px)"
+      },
+      "3xl": {
+        "value": "1.875rem",
+        "type": "fontSize",
+        "description": "3XL (30px)"
+      },
+      "4xl": {
+        "value": "2.25rem",
+        "type": "fontSize",
+        "description": "4XL (36px)"
+      },
+      "display": {
+        "value": "3.5rem",
+        "type": "fontSize",
+        "description": "Display (56px)"
+      },
+      "headline": {
+        "value": "2.5rem",
+        "type": "fontSize",
+        "description": "Headline (40px)"
+      }
+    },
+    "weight": {
+      "normal": {
+        "value": "400",
+        "type": "fontWeight",
+        "description": "Normal weight"
+      },
+      "medium": {
+        "value": "500",
+        "type": "fontWeight",
+        "description": "Medium weight"
+      },
+      "semibold": {
+        "value": "600",
+        "type": "fontWeight",
+        "description": "Semibold weight"
+      },
+      "bold": {
+        "value": "700",
+        "type": "fontWeight",
+        "description": "Bold weight"
+      },
+      "button": {
+        "value": "500",
+        "type": "fontWeight",
+        "description": "Button font weight"
+      },
+      "headline": {
+        "value": "600",
+        "type": "fontWeight",
+        "description": "Headline font weight"
+      }
+    },
+    "lineHeight": {
+      "tight": {
+        "value": "1.25",
+        "type": "lineHeight",
+        "description": "Tight line height"
+      },
+      "normal": {
+        "value": "1.5",
+        "type": "lineHeight",
+        "description": "Normal line height"
+      },
+      "relaxed": {
+        "value": "1.625",
+        "type": "lineHeight",
+        "description": "Relaxed line height"
+      },
+      "loose": {
+        "value": "2",
+        "type": "lineHeight",
+        "description": "Loose line height"
+      },
+      "headline": {
+        "value": "1.1",
+        "type": "lineHeight",
+        "description": "Headline line height"
+      }
+    },
+    "letterSpacing": {
+      "tighter": {
+        "value": "-0.02em",
+        "type": "letterSpacing",
+        "description": "Tighter tracking"
+      },
+      "tight": {
+        "value": "-0.01em",
+        "type": "letterSpacing",
+        "description": "Tight tracking"
+      },
+      "normal": {
+        "value": "0",
+        "type": "letterSpacing",
+        "description": "Normal tracking"
+      },
+      "wide": {
+        "value": "0.02em",
+        "type": "letterSpacing",
+        "description": "Wide tracking"
+      },
+      "wider": {
+        "value": "0.05em",
+        "type": "letterSpacing",
+        "description": "Wider tracking"
+      }
+    }
+  }
+}

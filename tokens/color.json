@@ -1,0 +1,196 @@
+{
+  "color": {
+    "primary": {
+      "value": "#011540",
+      "type": "color",
+      "description": "Primary brand color (navy blue)"
+    },
+    "secondary": {
+      "value": "#967847",
+      "type": "color",
+      "description": "Secondary brand color (NE gold)"
+    },
+    "accent": {
+      "value": "#967847",
+      "type": "color",
+      "description": "Accent color (same as secondary)"
+    },
+    "tertiary": {
+      "value": "#d9d9d9",
+      "type": "color",
+      "description": "Tertiary color (light gray)"
+    },
+    "background": {
+      "value": "#ffffff",
+      "type": "color",
+      "description": "Page background"
+    },
+    "background-secondary": {
+      "value": "#f9fafb",
+      "type": "color",
+      "description": "Secondary background"
+    },
+    "background-tertiary": {
+      "value": "#f3f4f6",
+      "type": "color",
+      "description": "Tertiary background"
+    },
+    "text": {
+      "primary": {
+        "value": "#1f2937",
+        "type": "color",
+        "description": "Primary text color"
+      },
+      "secondary": {
+        "value": "#4b5563",
+        "type": "color",
+        "description": "Secondary text color"
+      },
+      "tertiary": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Tertiary text (on dark backgrounds)"
+      },
+      "muted": {
+        "value": "#9ca3af",
+        "type": "color",
+        "description": "Muted text color"
+      }
+    },
+    "button": {
+      "primary": {
+        "value": "#011540",
+        "type": "color",
+        "description": "Primary button background"
+      },
+      "primary-text": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Primary button text"
+      },
+      "hover": {
+        "value": "#012060",
+        "type": "color",
+        "description": "Button hover state"
+      },
+      "pressed": {
+        "value": "#010d30",
+        "type": "color",
+        "description": "Button pressed state"
+      },
+      "secondary": {
+        "value": "#967847",
+        "type": "color",
+        "description": "Secondary button background"
+      },
+      "secondary-text": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Secondary button text"
+      },
+      "outline-border": {
+        "value": "#011540",
+        "type": "color",
+        "description": "Outline button border"
+      },
+      "outline-text": {
+        "value": "#011540",
+        "type": "color",
+        "description": "Outline button text"
+      }
+    },
+    "link": {
+      "value": "#0066cc",
+      "type": "color",
+      "description": "Link color"
+    },
+    "link-hover": {
+      "value": "#004499",
+      "type": "color",
+      "description": "Link hover color"
+    },
+    "card": {
+      "bg": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Card background"
+      },
+      "border": {
+        "value": "#e5e7eb",
+        "type": "color",
+        "description": "Card border"
+      }
+    },
+    "toggle": {
+      "active": {
+        "value": "#011540",
+        "type": "color",
+        "description": "Toggle active state"
+      },
+      "inactive": {
+        "value": "#e5e7eb",
+        "type": "color",
+        "description": "Toggle inactive state"
+      }
+    },
+    "gray": {
+      "dark": {
+        "value": "#374151",
+        "type": "color",
+        "description": "Dark gray"
+      },
+      "medium": {
+        "value": "#6b7280",
+        "type": "color",
+        "description": "Medium gray"
+      },
+      "light": {
+        "value": "#e5e7eb",
+        "type": "color",
+        "description": "Light gray"
+      },
+      "mist": {
+        "value": "#f3f4f6",
+        "type": "color",
+        "description": "Mist gray"
+      },
+      "divider": {
+        "value": "#d1d5db",
+        "type": "color",
+        "description": "Divider color"
+      }
+    },
+    "status": {
+      "success": {
+        "value": "#10b981",
+        "type": "color",
+        "description": "Success color"
+      },
+      "warning": {
+        "value": "#f59e0b",
+        "type": "color",
+        "description": "Warning color"
+      },
+      "error": {
+        "value": "#ef4444",
+        "type": "color",
+        "description": "Error color"
+      },
+      "info": {
+        "value": "#3b82f6",
+        "type": "color",
+        "description": "Info color"
+      }
+    },
+    "border": {
+      "value": "#e5e7eb",
+      "type": "color",
+      "description": "Default border color"
+    },
+    "divider": {
+      "value": "#d1d5db",
+      "type": "color",
+      "description": "Divider color"
+    }
+  }
+}

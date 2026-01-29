@@ -1,0 +1,48 @@
+{
+  "transition": {
+    "duration": {
+      "fast": {
+        "value": "150ms",
+        "type": "duration",
+        "description": "Fast transition"
+      },
+      "default": {
+        "value": "200ms",
+        "type": "duration",
+        "description": "Default transition"
+      },
+      "slow": {
+        "value": "300ms",
+        "type": "duration",
+        "description": "Slow transition"
+      },
+      "slower": {
+        "value": "500ms",
+        "type": "duration",
+        "description": "Slower transition"
+      }
+    },
+    "easing": {
+      "default": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "type": "easing",
+        "description": "Default easing"
+      },
+      "in": {
+        "value": "cubic-bezier(0.4, 0, 1, 1)",
+        "type": "easing",
+        "description": "Ease in"
+      },
+      "out": {
+        "value": "cubic-bezier(0, 0, 0.2, 1)",
+        "type": "easing",
+        "description": "Ease out"
+      },
+      "in-out": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "type": "easing",
+        "description": "Ease in-out"
+      }
+    }
+  }
+}

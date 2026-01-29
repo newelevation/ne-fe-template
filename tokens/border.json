@@ -1,0 +1,83 @@
+{
+  "border": {
+    "radius": {
+      "none": {
+        "value": "0",
+        "type": "borderRadius",
+        "description": "No radius"
+      },
+      "sm": {
+        "value": "0.125rem",
+        "type": "borderRadius",
+        "description": "Small radius"
+      },
+      "default": {
+        "value": "0.25rem",
+        "type": "borderRadius",
+        "description": "Default radius"
+      },
+      "md": {
+        "value": "0.375rem",
+        "type": "borderRadius",
+        "description": "Medium radius"
+      },
+      "lg": {
+        "value": "0.5rem",
+        "type": "borderRadius",
+        "description": "Large radius"
+      },
+      "xl": {
+        "value": "0.75rem",
+        "type": "borderRadius",
+        "description": "Extra large radius"
+      },
+      "2xl": {
+        "value": "1rem",
+        "type": "borderRadius",
+        "description": "2XL radius"
+      },
+      "full": {
+        "value": "9999px",
+        "type": "borderRadius",
+        "description": "Full radius (pill)"
+      },
+      "button": {
+        "value": "0.25rem",
+        "type": "borderRadius",
+        "description": "Button radius"
+      },
+      "input": {
+        "value": "0.25rem",
+        "type": "borderRadius",
+        "description": "Input radius"
+      },
+      "card": {
+        "value": "0.5rem",
+        "type": "borderRadius",
+        "description": "Card radius"
+      }
+    },
+    "width": {
+      "0": {
+        "value": "0",
+        "type": "borderWidth",
+        "description": "No border"
+      },
+      "1": {
+        "value": "1px",
+        "type": "borderWidth",
+        "description": "1px border"
+      },
+      "2": {
+        "value": "2px",
+        "type": "borderWidth",
+        "description": "2px border"
+      },
+      "4": {
+        "value": "4px",
+        "type": "borderWidth",
+        "description": "4px border"
+      }
+    }
+  }
+}
