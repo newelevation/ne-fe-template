@@ -261,3 +261,27 @@ Auto-generated assets in `src/app/`:
 ## Path Alias
 
 `@/*` maps to `./src/*`
+
+---
+
+## HTML Report Reference
+
+**`sample-report.html`** serves as the canonical reference for the look and feel of standalone HTML reports generated with New Elevation branding. When creating HTML reports outside of the Next.js application, use this file as your visual and structural model.
+
+### Key Patterns from sample-report.html
+
+- **No rounded corners**: `border-radius: 0 !important` on all elements
+- **CSS custom properties**: Uses `:root` variables for colors and spacing
+- **Sticky navigation**: Navigation bar stays fixed at top during scroll
+- **Section-based layout**: Content organized into distinct `<section>` blocks
+- **Responsive design**: Flexbox-based navigation wraps on smaller screens
+- **Header structure**: Dark header with title, subtitle, and metadata
+- **Print-friendly**: Designed for both screen and print output
+
+### When to Use
+
+Reference `sample-report.html` when:
+- Generating standalone HTML reports via templates (Jinja2, etc.)
+- Creating documentation exports
+- Building HTML artifacts that need NE branding but don't use Next.js
+- Ensuring visual consistency with the design system
