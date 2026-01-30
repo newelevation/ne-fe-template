@@ -123,12 +123,43 @@ This generates:
 Import from `@/app/components/ui`:
 
 ```tsx
-import { Button, Input, Modal } from '@/app/components/ui';
+import { Button, Card, Input, Modal, Alert } from '@/app/components/ui';
+```
 
-// Button variants: primary, secondary, outline, ghost, danger
+### Available Components
+
+| Component | Description |
+|-----------|-------------|
+| `Button` | Variants: primary, secondary, outline, ghost, danger. Sizes: sm, md, lg |
+| `Card` | Container with padding (none/sm/md/lg) and hoverable option |
+| `Input` | Form input with label, error, and helperText props |
+| `Modal` | Dialog with title, size options, backdrop/escape close |
+| `Alert` | Status messages (info, success, warning, error) |
+| `Badge` | Small status indicators |
+| `Tooltip` | Hover information popover |
+| `Toast` | Temporary notifications via `useToast()` hook |
+| `Tabs` | Tabbed interface (`Tabs`, `TabList`, `Tab`, `TabPanel`) |
+| `Select` | Dropdown select with options |
+| `Checkbox` | Checkbox with label |
+| `Radio` | Radio button with label |
+| `ToggleSwitch` | On/off toggle switch |
+| `Skeleton` | Loading placeholder |
+| `EmptyState` | No-content placeholder with icon and action |
+
+### Example Usage
+
+```tsx
+// Buttons
 <Button variant="primary" size="md">Click me</Button>
+<Button variant="outline" loading>Saving...</Button>
 
-// Input with validation
+// Cards
+<Card padding="lg" hoverable>
+  <h3>Card Title</h3>
+  <p>Card content</p>
+</Card>
+
+// Form inputs
 <Input label="Email" error="Invalid email" />
 
 // Modal dialog
