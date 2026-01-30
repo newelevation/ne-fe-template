@@ -43,23 +43,19 @@ export default function Header({ appName = 'Application' }: HeaderProps) {
           className="flex items-center pr-6 border-r group"
           style={{ borderColor: 'var(--sys-header-border)' }}
         >
-          <div className="relative">
+          <div className="relative h-10 w-[120px]">
             <Image
               src="/ne-logo-gold.svg"
               alt="New Elevation"
-              width={150}
-              height={60}
-              style={{ height: 'auto' }}
-              className="object-contain transition-opacity duration-200 group-hover:opacity-0"
+              fill
+              className="object-contain object-left transition-opacity duration-200 group-hover:opacity-0"
               priority
             />
             <Image
               src="/ne-logo-white.svg"
               alt="New Elevation"
-              width={150}
-              height={60}
-              style={{ height: 'auto' }}
-              className="object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+              fill
+              className="object-contain object-left absolute top-0 left-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
               priority
             />
           </div>

@@ -1,9 +1,11 @@
-import { HelpCircle, MessageCircle, Mail, ExternalLink } from 'lucide-react';
+import { HelpCircle, TestTube2, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+import { Card } from '@/app/components/ui';
 
 /**
  * Help page.
  *
- * Provides support resources and frequently asked questions.
+ * Provides frequently asked questions and support information.
  */
 export default function HelpPage() {
   const faqs = [
@@ -20,33 +22,12 @@ export default function HelpPage() {
     {
       question: 'How do I report a bug or issue?',
       answer:
-        'You can report issues through our support channels. Use the contact options below to reach our team.',
+        'Contact your administrator or use the appropriate support channel for your organization.',
     },
     {
       question: 'How do I customize my settings?',
       answer:
         'Navigate to the Settings page using the sidebar to configure notifications, appearance, and other preferences.',
-    },
-  ];
-
-  const supportOptions = [
-    {
-      icon: <MessageCircle size={24} />,
-      title: 'Live Chat',
-      description: 'Chat with our support team in real-time.',
-      action: 'Start Chat',
-    },
-    {
-      icon: <Mail size={24} />,
-      title: 'Email Support',
-      description: 'Send us an email and we\'ll respond within 24 hours.',
-      action: 'Send Email',
-    },
-    {
-      icon: <ExternalLink size={24} />,
-      title: 'Knowledge Base',
-      description: 'Browse our extensive library of help articles.',
-      action: 'Browse Articles',
     },
   ];
 
@@ -57,47 +38,56 @@ export default function HelpPage() {
         <h1 className="text-4xl font-bold text-primary">Help & Support</h1>
       </div>
       <p className="text-text-secondary mb-8">
-        Find answers to common questions and get in touch with our support team.
+        Find answers to common questions.
       </p>
 
+      {/* Testing Section */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Testing</h2>
+        <Card>
+          <div className="flex items-start gap-4">
+            <div className="text-secondary flex-shrink-0">
+              <TestTube2 size={24} />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-medium mb-2">Test Reports</h3>
+              <p className="text-text-secondary text-sm mb-3">
+                View the latest E2E test results. Run{' '}
+                <code className="bg-gray-100 px-1 py-0.5 text-xs">npm run test:e2e</code>{' '}
+                to generate updated reports.
+              </p>
+              <Link
+                href="/test-reports/index.html"
+                target="_blank"
+                className="inline-flex items-center gap-2 text-secondary hover:underline text-sm"
+              >
+                View E2E Test Report
+                <ExternalLink size={14} />
+              </Link>
+            </div>
+          </div>
+        </Card>
+      </section>
+
       {/* FAQ Section */}
-      <section className="mb-10">
+      <section>
         <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
         <div className="space-y-3">
           {faqs.map((faq, index) => (
-            <details key={index} className="card group cursor-pointer">
-              <summary className="font-medium list-none flex items-center justify-between">
-                {faq.question}
-                <span className="text-secondary transition-transform group-open:rotate-180">
-                  ▼
-                </span>
-              </summary>
-              <p className="mt-3 text-text-secondary text-sm">{faq.answer}</p>
-            </details>
+            <Card key={index} className="group cursor-pointer" padding="md">
+              <details>
+                <summary className="list-none flex items-center justify-between">
+                  <h3 className="font-medium">{faq.question}</h3>
+                  <span className="text-secondary transition-transform group-open:rotate-180">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-3 text-text-secondary text-sm">{faq.answer}</p>
+              </details>
+            </Card>
           ))}
         </div>
       </section>
-
-      {/* Support Options */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Contact Support</h2>
-        <div className="grid gap-4 md:grid-cols-3">
-          {supportOptions.map((option, index) => (
-            <div key={index} className="card text-center">
-              <div className="text-secondary mb-3 flex justify-center">{option.icon}</div>
-              <h3 className="font-medium mb-1">{option.title}</h3>
-              <p className="text-text-secondary text-sm mb-4">{option.description}</p>
-              <button className="btn btn-outline w-full">{option.action}</button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="mt-8 p-4 bg-gray-50 border border-gray-200">
-        <p className="text-sm text-text-secondary">
-          <strong>Note:</strong> This is a template page. Connect these support options to your actual support systems.
-        </p>
-      </div>
     </div>
   );
 }

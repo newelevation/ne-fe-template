@@ -6,6 +6,7 @@
  */
 import extend from './extend.generated.js';
 import forms from '@tailwindcss/forms';
+import animate from 'tailwindcss-animate';
 
 export default {
   content: [
@@ -20,5 +21,6 @@ export default {
   darkMode: 'class',
   plugins: [
     forms,
+    animate,
   ],
 };

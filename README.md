@@ -1,22 +1,25 @@
 # NE Front-End Template
 
-A modern React/Next.js template for building New Elevation branded web applications. This template provides a solid foundation with pre-configured tooling, responsive layout, and NE design tokens.
+A production-ready Next.js 16 template with New Elevation branding, design tokens, and enterprise features.
 
 ## Features
 
-- **Next.js 15** with App Router and Turbopack
-- **TypeScript** for type safety
-- **Tailwind CSS** with NE design tokens
-- **Responsive Layout** with header, sidebar, and footer
-- **Theme Support** (light/dark mode ready)
-- **Code Quality** tools (ESLint, Prettier, Husky)
-- **NE Branding** assets and color palette
+- **Next.js 16** with App Router and Turbopack
+- **Design Token System** - Style Dictionary for consistent theming
+- **TypeScript** - Full type safety
+- **Tailwind CSS** - Utility-first styling with token integration
+- **Security Headers** - CSP, HSTS, and OWASP-recommended headers
+- **SEO Ready** - Meta tags, Open Graph, Twitter cards, sitemap
+- **Accessibility** - WCAG-compliant components with skip links
+- **Testing** - Vitest + React Testing Library
+- **CI/CD** - GitHub Actions workflow
 
 ## Quick Start
 
 ```bash
-# Navigate to the template directory
-cd ne-fe-template
+# Clone the template
+git clone https://github.com/newelevation/ne-fe-template.git my-app
+cd my-app
 
 # Install dependencies
 npm install
@@ -25,183 +28,178 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## Configuration
+
+### 1. Site Configuration
+
+Edit `src/config/site.ts` to customize:
+
+```typescript
+export const siteConfig = {
+  name: 'Your App Name',
+  description: 'Your app description',
+  url: 'https://your-domain.com',
+  // ...
+};
+```
+
+### 2. Navigation
+
+Edit `src/config/navigation.tsx` to customize sidebar and header navigation.
+
+### 3. Environment Variables
+
+Copy `.env.example` to `.env.local` and configure:
+
+```bash
+cp .env.example .env.local
+```
 
 ## Project Structure
 
 ```
-ne-fe-template/
-├── public/                      # Static assets (logos)
-├── src/app/
+src/
+├── app/
 │   ├── components/
-│   │   ├── layout/             # Header, Footer, Sidebar, Logo
-│   │   ├── theme/              # ThemeProvider
-│   │   └── ui/                 # Add your components here
-│   ├── styles/generated/       # Design tokens CSS
-│   ├── utils/                  # Utility functions
-│   ├── globals.css             # Global styles
-│   ├── layout.tsx              # Root layout
-│   └── page.tsx                # Home page
-├── package.json
-├── tailwind.config.js
-└── tsconfig.json
+│   │   ├── layout/      # Header, Sidebar, Footer
+│   │   ├── theme/       # ThemeProvider, tokens
+│   │   └── ui/          # Button, Input, Modal
+│   ├── styles/
+│   │   └── generated/   # Auto-generated token CSS
+│   ├── utils/           # Utility functions
+│   ├── api/             # API routes
+│   ├── error.tsx        # Error boundary
+│   ├── loading.tsx      # Loading state
+│   ├── not-found.tsx    # 404 page
+│   └── layout.tsx       # Root layout with metadata
+├── config/
+│   ├── site.ts          # Site metadata
+│   └── navigation.tsx   # Navigation config
+└── tokens/              # Design token JSON files
 ```
 
-## Customization
-
-### Change Application Name
-
-Edit `src/app/layout.tsx`:
-
-```tsx
-<Header appName="Your Application Name" />
-```
-
-### Modify Navigation
-
-Edit `src/app/components/layout/Sidebar.tsx` to update navigation items:
-
-```tsx
-const defaultNavItems: NavItem[] = [
-  { id: 'home', href: '/', icon: <Home size={24} />, label: 'Home' },
-  { id: 'custom', href: '/custom', icon: <Star size={24} />, label: 'Custom Page' },
-];
-```
-
-### Update Colors
-
-Edit `src/app/styles/generated/tokens.css` to customize the color palette:
-
-```css
-:root {
-  --color-primary: #011540;      /* Your primary color */
-  --color-secondary: #967847;    /* Your secondary color */
-  /* ... */
-}
-```
-
-### Add New Pages
-
-Create a new directory in `src/app/`:
-
-```tsx
-// src/app/my-page/page.tsx
-export default function MyPage() {
-  return (
-    <div className="max-w-4xl">
-      <h1 className="text-4xl font-bold text-primary">My Page</h1>
-    </div>
-  );
-}
-```
-
-## Available Scripts
+## Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server with Turbopack |
+| `npm run dev` | Start development server |
 | `npm run build` | Build for production |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
 | `npm run lint:fix` | Fix ESLint errors |
 | `npm run format` | Format with Prettier |
-| `npm run format:check` | Check formatting |
+| `npm run tokens:build` | Regenerate design tokens |
+| `npm run test` | Run tests |
+| `npm run test:watch` | Run tests in watch mode |
 
 ## Design Tokens
 
-The template includes a comprehensive design token system:
+Tokens are defined in `tokens/*.json` and compiled using Style Dictionary:
 
-### Colors
-- **Primary**: Navy blue (`#011540`)
-- **Secondary/Accent**: Gold (`#967847`)
-- **Status**: Success, Warning, Error, Info
-- **Grays**: Dark, Medium, Light, Mist
-
-### Spacing
-- Semantic scale: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`
-- Numeric scale: `0` through `24`
-
-### Typography
-- Font families: Sans (Inter), Mono
-- Sizes: `xs` through `4xl`, plus display/headline
-
-### Borders & Shadows
-- Border radius: `none` through `full`
-- Shadows: `none` through `xl`
-
-## Component Classes
-
-Pre-built CSS classes for common patterns:
-
-```html
-<!-- Card -->
-<div class="card">...</div>
-
-<!-- Buttons -->
-<button class="btn btn-primary">Primary</button>
-<button class="btn btn-secondary">Secondary</button>
-<button class="btn btn-outline">Outline</button>
-
-<!-- Spacing utilities -->
-<div class="padding-md margin-lg gap-sm">...</div>
+```bash
+npm run tokens:build
 ```
 
-## NE Brand Guidelines
+This generates:
+- `src/app/styles/generated/tokens.css` - CSS custom properties
+- `extend.generated.js` - Tailwind theme extension
+- `src/app/components/theme/tokens.generated.ts` - TypeScript constants
 
-When building applications with this template:
+### Token Files
 
-1. **Colors**: Use the defined token palette. Avoid purple.
-2. **Corners**: Prefer sharp corners (minimal border-radius)
-3. **Effects**: Avoid gradients. Use flat, solid colors.
-4. **Gold Accent**: Use secondary color at 25% opacity for subtle presentation
+| File | Contents |
+|------|----------|
+| `color.json` | Brand colors, text, buttons, status |
+| `typography.json` | Fonts, sizes, weights |
+| `spacing.json` | Spacing scale |
+| `shadow.json` | Box shadows |
+| `border.json` | Border radius, widths |
+| `transition.json` | Animation durations |
 
-## Path Aliases
+## UI Components
 
-Import using the `@/*` alias:
+Import from `@/app/components/ui`:
 
 ```tsx
-import { Header } from '@/app/components/layout';
-import { cn } from '@/app/utils';
+import { Button, Input, Modal } from '@/app/components/ui';
+
+// Button variants: primary, secondary, outline, ghost, danger
+<Button variant="primary" size="md">Click me</Button>
+
+// Input with validation
+<Input label="Email" error="Invalid email" />
+
+// Modal dialog
+<Modal open={isOpen} onClose={close} title="Confirm">
+  <p>Are you sure?</p>
+</Modal>
 ```
 
-## Adding Components
+## API Routes
 
-Create new components in `src/app/components/ui/`:
+Example API route at `src/app/api/health/route.ts`:
 
-```tsx
-// src/app/components/ui/Button.tsx
-import { cn } from '@/app/utils';
+```typescript
+// GET /api/health
+// Returns: { status: 'ok', timestamp: '...', environment: '...' }
+```
 
-interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline';
-  children: React.ReactNode;
-}
+## Testing
 
-export function Button({ variant = 'primary', children }: ButtonProps) {
-  return (
-    <button className={cn('btn', `btn-${variant}`)}>
-      {children}
-    </button>
-  );
-}
+```bash
+# Run all tests
+npm run test
+
+# Watch mode
+npm run test:watch
+
+# Coverage report
+npm run test:coverage
 ```
 
 ## Deployment
 
-Deploy to any platform that supports Next.js:
+### Vercel (Recommended)
 
-- **Vercel** (recommended): Connect your repository for automatic deployments
-- **AWS Amplify**: Use the Next.js build settings
-- **Docker**: Build and containerize the application
-- **Static Export**: Run `next build` with output: 'export' in next.config.ts
+```bash
+npm i -g vercel
+vercel
+```
 
-## Related Resources
+### Docker
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Lucide Icons](https://lucide.dev/icons)
-- [NE Style Guide](../ne-style-guide/) - Full design system reference
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+## NE Brand Guidelines
+
+- **Colors**: Use token palette. No purple. Prefer grayscale backgrounds.
+- **Corners**: Sharp corners (minimal border-radius)
+- **Effects**: No gradients. Flat, solid colors only.
+- **Gold accent**: Use `--color-secondary` (#967847) at 25% opacity for subtle use
+
+## Security
+
+Security headers are configured in `next.config.ts`:
+
+- Content-Security-Policy
+- Strict-Transport-Security
+- X-Content-Type-Options
+- X-Frame-Options
+- X-XSS-Protection
+- Referrer-Policy
+- Permissions-Policy
 
 ## License
 
-Copyright New Elevation. All rights reserved.
+Proprietary - New Elevation

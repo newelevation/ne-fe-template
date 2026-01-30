@@ -49,9 +49,14 @@ Fixed chrome layout in `src/app/layout.tsx`:
 
 **Configuring navigation**: Edit `src/config/navigation.tsx`
 
-**Component classes** (from `globals.css`):
-- `.card` - Card container
-- `.btn`, `.btn-primary`, `.btn-secondary`, `.btn-outline` - Buttons
+**Configuring SEO/metadata**: Edit `src/config/site.ts`
+
+**UI Components** (from `@/app/components/ui`):
+- `<Button>` - Button with variants: primary, secondary, outline, ghost, danger
+- `<Card>` - Card container with padding options
+- `<Input>` - Form input field
+- `<Modal>` - Dialog modal
+- `<Alert>`, `<Badge>`, `<Tooltip>`, `<Tabs>`, etc.
 
 **Class utility**: `cn()` from `@/app/utils` (clsx + tailwind-merge)
 
@@ -61,6 +66,22 @@ Fixed chrome layout in `src/app/layout.tsx`:
 - **Corners**: Sharp corners (minimal border-radius)
 - **Effects**: No gradients. Flat, solid colors only.
 - **Gold accent**: `--color-secondary` (#967847) at 25% opacity for subtle use
+
+## SEO & Social Sharing
+
+Configure in `src/config/site.ts`:
+- `name` - App name (title, OG title)
+- `description` - Meta description
+- `url` - Canonical URL for production
+- `keywords` - SEO keywords
+- `themeColor` - Browser chrome color
+- `social.twitter` - Twitter handle
+
+Auto-generated assets in `src/app/`:
+- `icon.svg` - Favicon (NE emblem)
+- `apple-icon.svg` - Apple touch icon
+- `opengraph-image.svg` - Facebook/LinkedIn sharing (1200x630)
+- `twitter-image.svg` - Twitter/X sharing
 
 ## Path Alias
 

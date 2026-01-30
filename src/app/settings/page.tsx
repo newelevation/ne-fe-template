@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Settings, Bell, Shield, Palette, User } from 'lucide-react';
+import { Card, ToggleSwitch } from '@/app/components/ui';
 
 /**
  * Settings page.
@@ -55,9 +56,10 @@ export default function SettingsPage() {
         Configure your application preferences and account settings.
       </p>
 
+      <h2 className="text-2xl font-semibold mb-4">Settings Categories</h2>
       <div className="space-y-4">
         {settingsSections.map((section, index) => (
-          <div key={index} className="card">
+          <Card key={index}>
             <div className="flex items-start justify-between">
               <div className="flex items-start gap-4">
                 <div className="text-secondary flex-shrink-0 mt-1">{section.icon}</div>
@@ -67,30 +69,14 @@ export default function SettingsPage() {
                 </div>
               </div>
               {section.toggle && (
-                <label className="flex items-center cursor-pointer">
-                  <span className="text-sm text-text-secondary mr-3">{section.toggle.label}</span>
-                  <div className="relative">
-                    <input
-                      type="checkbox"
-                      checked={section.toggle.enabled}
-                      onChange={section.toggle.onChange}
-                      className="sr-only"
-                    />
-                    <div
-                      className={`w-10 h-6 rounded-full transition-colors ${
-                        section.toggle.enabled ? 'bg-secondary' : 'bg-gray-300'
-                      }`}
-                    />
-                    <div
-                      className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${
-                        section.toggle.enabled ? 'translate-x-4' : ''
-                      }`}
-                    />
-                  </div>
-                </label>
+                <ToggleSwitch
+                  checked={section.toggle.enabled}
+                  onChange={section.toggle.onChange}
+                  label={section.toggle.label}
+                />
               )}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
 

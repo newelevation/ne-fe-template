@@ -1,4 +1,5 @@
 import { FileText, Book, Code, Terminal } from 'lucide-react';
+import { Card } from '@/app/components/ui';
 
 /**
  * Documentation page.
@@ -36,9 +37,10 @@ export default function DocsPage() {
         Explore guides, references, and resources to help you get the most out of this application.
       </p>
 
+      <h2 className="text-2xl font-semibold mb-4">Documentation Sections</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {sections.map((section, index) => (
-          <div key={index} className="card hover:shadow-md transition-shadow cursor-pointer">
+          <Card key={index} hoverable className="cursor-pointer">
             <div className="flex items-start gap-4">
               <div className="text-secondary flex-shrink-0">{section.icon}</div>
               <div>
@@ -46,7 +48,7 @@ export default function DocsPage() {
                 <p className="text-text-secondary text-sm">{section.description}</p>
               </div>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
 

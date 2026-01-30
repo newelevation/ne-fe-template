@@ -63,10 +63,7 @@
   --sys-card-border: #e5e7eb;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
+/* Smooth scroll - controlled via data-scroll-behavior attribute on html element */
 
 /* Body styling */
 body {
@@ -94,37 +91,6 @@ body {
 }
 
 /* ============================================
-   SPACING UTILITY CLASSES
-   ============================================ */
-
-.margin-2xs { margin: var(--spacing-2xs); }
-.margin-xs { margin: var(--spacing-xs); }
-.margin-sm { margin: var(--spacing-sm); }
-.margin-md { margin: var(--spacing-md); }
-.margin-lg { margin: var(--spacing-lg); }
-.margin-xl { margin: var(--spacing-xl); }
-.margin-2xl { margin: var(--spacing-2xl); }
-.margin-3xl { margin: var(--spacing-3xl); }
-
-.padding-2xs { padding: var(--spacing-2xs); }
-.padding-xs { padding: var(--spacing-xs); }
-.padding-sm { padding: var(--spacing-sm); }
-.padding-md { padding: var(--spacing-md); }
-.padding-lg { padding: var(--spacing-lg); }
-.padding-xl { padding: var(--spacing-xl); }
-.padding-2xl { padding: var(--spacing-2xl); }
-.padding-3xl { padding: var(--spacing-3xl); }
-
-.gap-2xs { gap: var(--spacing-2xs); }
-.gap-xs { gap: var(--spacing-xs); }
-.gap-sm { gap: var(--spacing-sm); }
-.gap-md { gap: var(--spacing-md); }
-.gap-lg { gap: var(--spacing-lg); }
-.gap-xl { gap: var(--spacing-xl); }
-.gap-2xl { gap: var(--spacing-2xl); }
-.gap-3xl { gap: var(--spacing-3xl); }
-
-/* ============================================
    DARK MODE
    ============================================ */
 
@@ -146,52 +112,4 @@ body {
 .dark input::placeholder,
 .dark textarea::placeholder {
   color: var(--color-gray-medium);
-}
-
-/* ============================================
-   COMPONENT CLASSES
-   ============================================ */
-
-/* Card */
-.card {
-  background-color: var(--color-card-bg);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-lg);
-}
-
-/* Buttons */
-.btn {
-  font-family: var(--font-family-sans);
-  font-weight: var(--font-weight-medium);
-  padding: var(--spacing-button-y) var(--spacing-button-x);
-  border-radius: var(--border-radius-button);
-  transition: all var(--transition-duration-default) var(--transition-easing-default);
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: var(--color-button-primary);
-  color: var(--color-button-primary-text);
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-button-hover);
-}
-
-.btn-secondary {
-  background-color: var(--color-button-secondary);
-  color: var(--color-button-secondary-text);
-  border: none;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-button-outline-text);
-  border: 1px solid var(--color-button-outline-border);
-}
-
-.btn-outline:hover {
-  background-color: var(--color-gray-mist);
 }

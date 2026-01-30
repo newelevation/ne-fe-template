@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { HelpCircle, X, FileText, Settings, MessageCircle, ExternalLink } from 'lucide-react';
+import { Button } from '@/app/components/ui';
 
 /**
  * Application footer with copyright and help panel.
@@ -69,13 +70,11 @@ export default function Footer() {
               ))}
             </nav>
             <div className="mt-4 pt-4 border-t" style={{ borderColor: 'var(--color-border)' }}>
-              <Link
-                href="/help"
-                className="flex items-center justify-center gap-2 w-full btn btn-primary text-sm"
-                onClick={() => setHelpOpen(false)}
-              >
-                <ExternalLink size={14} />
-                Visit Help Center
+              <Link href="/help" onClick={() => setHelpOpen(false)}>
+                <Button variant="primary" size="sm" fullWidth className="flex items-center justify-center gap-2">
+                  <ExternalLink size={14} />
+                  Visit Help Center
+                </Button>
               </Link>
             </div>
           </div>

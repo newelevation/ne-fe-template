@@ -4,6 +4,8 @@
  * This is your application's landing page. Customize this component
  * to display your main content.
  */
+import { Button, Card } from '@/app/components/ui';
+
 export default function HomePage() {
   return (
     <div className="max-w-4xl">
@@ -19,7 +21,7 @@ export default function HomePage() {
 
       {/* Introduction Section */}
       <section className="mb-8">
-        <div className="card">
+        <Card padding="lg">
           <h2 className="text-2xl font-semibold mb-4">Getting Started</h2>
           <p className="text-text-secondary mb-4">
             This template provides a solid foundation for building New Elevation branded
@@ -32,48 +34,48 @@ export default function HomePage() {
             <li>Theme support (light/dark mode ready)</li>
             <li>ESLint, Prettier, and Husky for code quality</li>
           </ul>
-        </div>
+        </Card>
       </section>
 
       {/* Quick Actions */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="card">
+          <Card>
             <h3 className="text-lg font-medium mb-2">Customize the Header</h3>
             <p className="text-text-secondary text-sm mb-3">
-              Edit <code className="bg-gray-mist px-1 rounded">layout.tsx</code> to change the
+              Edit <code className="bg-gray-mist px-1">layout.tsx</code> to change the
               application name and navigation items.
             </p>
-            <button className="btn btn-primary text-sm">Learn More</button>
-          </div>
+            <Button variant="primary" size="sm">Learn More</Button>
+          </Card>
 
-          <div className="card">
+          <Card>
             <h3 className="text-lg font-medium mb-2">Update Design Tokens</h3>
             <p className="text-text-secondary text-sm mb-3">
-              Modify <code className="bg-gray-mist px-1 rounded">tokens.css</code> to customize
+              Modify <code className="bg-gray-mist px-1">tokens.css</code> to customize
               colors, spacing, and typography.
             </p>
-            <button className="btn btn-outline text-sm">View Tokens</button>
-          </div>
+            <Button variant="outline" size="sm">View Tokens</Button>
+          </Card>
 
-          <div className="card">
+          <Card>
             <h3 className="text-lg font-medium mb-2">Add New Pages</h3>
             <p className="text-text-secondary text-sm mb-3">
-              Create new files in the <code className="bg-gray-mist px-1 rounded">app/</code>{' '}
+              Create new files in the <code className="bg-gray-mist px-1">app/</code>{' '}
               directory to add routes.
             </p>
-            <button className="btn btn-secondary text-sm">Documentation</button>
-          </div>
+            <Button variant="secondary" size="sm">Documentation</Button>
+          </Card>
 
-          <div className="card">
+          <Card>
             <h3 className="text-lg font-medium mb-2">Build Components</h3>
             <p className="text-text-secondary text-sm mb-3">
-              Use the <code className="bg-gray-mist px-1 rounded">components/ui/</code> directory
+              Use the <code className="bg-gray-mist px-1">components/ui/</code> directory
               for reusable UI components.
             </p>
-            <button className="btn btn-outline text-sm">Components</button>
-          </div>
+            <Button variant="outline" size="sm">Components</Button>
+          </Card>
         </div>
       </section>
 
@@ -82,27 +84,27 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold mb-4">Brand Colors</h2>
         <div className="flex gap-4 flex-wrap">
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg bg-primary" />
+            <div className="w-16 h-16 bg-primary" />
             <span className="text-sm text-text-secondary mt-2">Primary</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg bg-secondary" />
+            <div className="w-16 h-16 bg-secondary" />
             <span className="text-sm text-text-secondary mt-2">Secondary</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg bg-accent" />
+            <div className="w-16 h-16 bg-accent" />
             <span className="text-sm text-text-secondary mt-2">Accent</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg bg-status-success" />
+            <div className="w-16 h-16 bg-status-success" />
             <span className="text-sm text-text-secondary mt-2">Success</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg bg-status-warning" />
+            <div className="w-16 h-16 bg-status-warning" />
             <span className="text-sm text-text-secondary mt-2">Warning</span>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-lg bg-status-error" />
+            <div className="w-16 h-16 bg-status-error" />
             <span className="text-sm text-text-secondary mt-2">Error</span>
           </div>
         </div>

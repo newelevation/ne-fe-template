@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>.text-gold{fill:#967847}.text-white{fill:#ffffff}</style>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#011540"/>
+  <!-- NE Emblem (centered, scaled) -->
+  <g transform="translate(380, 95) scale(5)">
+    <path d="M43.94 0C19.67 0 0 19.67 0 43.94c0 24.27 19.67 43.94 43.94 43.94 24.27 0 43.94-19.67 43.94-43.94C87.88 19.67 68.2 0 43.94 0Zm30.03 73.97c-7.69 7.69-18.3 12.44-30.03 12.44S21.6 81.66 13.91 73.97C6.22 66.28 1.47 55.67 1.47 43.94S6.22 21.6 13.91 13.91C21.6 6.22 32.21 1.47 43.94 1.47s22.34 4.75 30.03 12.44c7.69 7.69 12.44 18.3 12.44 30.03s-4.75 22.34-12.44 30.03Z" class="text-gold"/>
+    <path d="M20.89 66.77a693.393 693.393 0 0 0 46.09-46.09 695.798 695.798 0 0 0-46.09 46.09Z" class="text-gold"/>
+    <path d="M24.23 27.2h.09L35.7 39.33h.11V23.54h-1.02V35.4h-.09L23.32 23.28h-.11v15.78h1.02V27.2z" class="text-gold"/>
+    <path d="M54.3 64.62h10.25V63.4h-8.23v-6.5h7.1v-1.02h-7.1v-5.57h8.23v-1.22H54.3v15.53z" class="text-gold"/>
+  </g>
+  <!-- App Name Text -->
+  <text x="600" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="500" text-anchor="middle" class="text-white">My Application</text>
+</svg>
